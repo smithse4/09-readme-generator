@@ -45,16 +45,57 @@ inquirer
     name: "tests"
   },
 ])
-.then(function(response) {
+.then(({ userName, title, description, installation, usage, license, contributing, tests}) => {
 
-  console.log(response);
-  // fs.appendFile("log.json", JSON.stringify(response, null, 4), function(err) {
+  const buildReadMe = `# ${title}
 
-  //     if (err) {
-  //       return console.log(err);
-  //     }
+${description}
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
     
-  //     console.log("Success!");
+### Installation
+
+${installation}
+
+### Usage
+
+${usage}
+
+### License
+
+${license}
+
+### Contributing
+
+${contributing}
+
+### Tests
+
+${tests}
+
+### Questions
+
+  
+
+  `;
+
+  // console.log(response);
+  fs.appendFile("README.md", buildReadMe, err => {
+
+      if (err) {
+        return console.log(err);
+      }
     
-  //   });
+      console.log("Your README has been created");
+    
+    });
+}).catch(err => {
+    console.log(err);
 });
