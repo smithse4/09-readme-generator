@@ -93,16 +93,17 @@ ${tests}
 
 ### Questions
 
-<img src="" alt="avatar" style="border-radius: 16px" width="30" />
+<img src="{profilePic}" alt="avatar" style="border-radius: 16px" width="30" />
 
   `;
 
+  
       axios
         .get(queryUrl)
         .then(function(response) {
-          // const profilePic = response.data.avatar_url
-          console.log(response.data.avatar_url);
-          // console.log(response);
+          // var profilePic = response.data.avatar_url
+          // // console.log(response.data.avatar_url);
+          console.log(response);
         })
         .catch(err => {
           console.log(err);
