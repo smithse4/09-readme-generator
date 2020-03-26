@@ -33,7 +33,7 @@ inquirer
       type: "list",
       message: "What license would you like to use?",
       name: "license",
-      choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"]
+      choices: ["MIT", "APACHE-2.0", "GPL-3.0", "BSD-3", "None"]
     },
     {
       type: "input",
@@ -59,6 +59,8 @@ inquirer
     }) => {
       const queryUrl = `https://api.github.com/users/${userName}`;
       const buildReadMe = `# ${title};
+
+![GitHub license](https://img.shields.io/badge/License-${license}-blueviolet.svg)](https://github.com/${userName}/${title})
 
 ${description}
 
@@ -93,24 +95,24 @@ ${tests}
 
 ### Questions
 
-<img src="{profilePic}" alt="avatar" style="border-radius: 16px" width="30" />
+<img src="" alt="avatar" style="border-radius: 16px" width="30" />
 
   `;
 
   
-      axios
-        .get(queryUrl)
-        .then(function(response) {
-          // var profilePic = response.data.avatar_url
-          // // console.log(response.data.avatar_url);
-          console.log(response);
-        })
-        .catch(err => {
-          console.log(err);
-        });
+      // axios
+      //   .get(queryUrl)
+      //   .then(function(response) {
+      //     // var profilePic = response.data.avatar_url
+      //     // // console.log(response.data.avatar_url);
+      //     console.log(response);
+      //   })
+      //   .catch(err => {
+      //     console.log(err);
+      //   });
 
       // console.log(response);
-      fs.writeFile("README.md", buildReadMe, err => {
+      fs.writeFile("created-README.md", buildReadMe, err => {
         if (err) {
           return console.log(err);
         }
