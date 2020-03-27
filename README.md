@@ -95,8 +95,6 @@ We would like you to have more than 200 commits by graduation, so commit early a
 
 ## Submission on BCS
 
-You are required to submit the following:
-
 [GitHub repository](https://github.com/smithse4/09-readme-generator)
 
 ![GIF Preview](img/readme.gif)
