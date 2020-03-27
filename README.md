@@ -1,9 +1,5 @@
 # Unit 09 Node.js and ES6+ Homework: Good README Generator
 
-[![GitHub license](https://img.shields.io/github/commit-activity/y/smithse4/09-readme-generator?color=blueviolet)](https://github.com/smithse4/09-readme-generator)
-
-
-
 Create a command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:
 
 ```sh
