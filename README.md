@@ -97,8 +97,6 @@ We would like you to have more than 200 commits by graduation, so commit early a
 
 You are required to submit the following:
 
-* An animated GIF demonstrating the app functionality
-
-* A generated README.md file for a project repo.
-
 [GitHub repository](https://github.com/smithse4/09-readme-generator)
+
+![GIF Preview](img/readme.gif)
