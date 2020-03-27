@@ -39,7 +39,7 @@ ${answer.tests}
 
 <img src="${profilePic}" alt="avatar" style="border-radius: 16px" width="30" />
 
-
+Contact me with questions through my email: ${answer.email}.
 `;
 }
 

@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const axios = require("axios");
-const api = require("./utils/api.js");
+// const api = require("./utils/api.js");
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
 const questions = [
@@ -45,6 +45,11 @@ const questions = [
     type: "input",
     message: "What tests have you run on this program?",
     name: "tests"
+  },
+  {
+    type: "input",
+    message: "What is your email address?",
+    name: "email"
   }
 ];
 

@@ -1,8 +1,8 @@
-# ofajhkj
+# wajfhkj
 
-![GitHub license](https://img.shields.io/badge/License-None-blueviolet.svg)
+![GitHub license](https://img.shields.io/badge/License-MIT-blueviolet.svg)
 
-wfkhljd
+uajfbk'
 
 ## Table of Contents
 
@@ -15,26 +15,26 @@ wfkhljd
     
 ## Installation
 
-jfKLN'D
+;fabjk
 
 ## Usage
 
-	'fkndl
+jafbkn
 
 ## License
 
-None
+MIT
 
 ## Contributing
 
-hfjkba
+jbfak'
 
 ## Tests
 
-kjwbfn
+jbfkn'
 
 ## Questions
 
 <img src="https://avatars0.githubusercontent.com/u/59581501?v=4" alt="avatar" style="border-radius: 16px" width="30" />
 
-
+Contact me with questions through my email: bqjfaln'k.
