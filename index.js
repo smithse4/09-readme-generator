@@ -1,6 +1,15 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const axios = require("axios");
+var api = require(‘./utils/api’);
+
+const questions = [];
+
+function writeToFile(fileName, data) {}
+
+function init() {}
+
+init();
 
 inquirer
   .prompt([
@@ -58,6 +67,26 @@ inquirer
       tests
     }) => {
       const queryUrl = `https://api.github.com/users/${userName}`;
+
+      axios
+        .get(queryUrl)
+        .then(function(response) {
+          var profilePic = response.data.avatar_url;
+          // // console.log(response.data.avatar_url);
+          console.log(response);
+
+          fs.writeFile("created-README.md", buildReadMe, err => {
+            if (err) {
+              return console.log(err);
+            }
+
+            console.log("Your README has been created");
+          });
+        })
+        .catch(err => {
+          console.log(err);
+        });
+
       const buildReadMe = `# ${title};
 
 ![GitHub license](https://img.shields.io/badge/License-${license}-blueviolet.svg)](https://github.com/${userName}/${title})
@@ -73,52 +102,31 @@ ${description}
 * [Tests](#tests)
 * [Questions](#questions)
     
-### Installation
+## Installation
 
 ${installation}
 
-### Usage
+## Usage
 
 ${usage}
 
-### License
+## License
 
 ${license}
 
-### Contributing
+## Contributing
 
 ${contributing}
 
-### Tests
+## Tests
 
 ${tests}
 
-### Questions
+## Questions
 
 <img src="" alt="avatar" style="border-radius: 16px" width="30" />
 
   `;
-
-  
-      // axios
-      //   .get(queryUrl)
-      //   .then(function(response) {
-      //     // var profilePic = response.data.avatar_url
-      //     // // console.log(response.data.avatar_url);
-      //     console.log(response);
-      //   })
-      //   .catch(err => {
-      //     console.log(err);
-      //   });
-
-      // console.log(response);
-      fs.writeFile("created-README.md", buildReadMe, err => {
-        if (err) {
-          return console.log(err);
-        }
-
-        console.log("Your README has been created");
-      });
     }
   )
   .catch(err => {
