@@ -1,7 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const axios = require("axios");
-// const api = require("./utils/api.js");
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
 const questions = [
